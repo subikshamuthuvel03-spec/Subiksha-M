@@ -1,0 +1,176 @@
+1)  A digital wallet application stores the current wallet balance and the amount spent by a customer. The application needs to calculate the remaining balance after the transaction. Read the initial balance and the amount spent, then calculate and display the remaining balance using an arithmetic expression.
+
+Input Format
+
+The first line contains an integer representing the basic salary. The second line contains an integer representing the allowance. The third line contains an integer representing the bonus.
+
+Constraints
+
+5000 <= basic_salary <= 100000 0 <= allowance <= 50000 0 <= bonus <= 50000
+
+Output Format
+
+Print the total salary.
+
+answer::
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT# Read inputs row by row
+basic_salary = int(input())
+allowance = int(input())
+bonus = int(input())
+total_salary = basic_salary + allowance + bonus
+print(total_salary)
+
+
+2)A customer purchases multiple units of a product from an online store. The application receives the price of one unit and the number of units purchased. Calculate the total product cost and subtract the given discount amount to obtain the final payable amount.
+
+Input Format
+
+The first line contains an integer representing the price of one product. The second line contains an integer representing the quantity purchased. The third line contains an integer representing the discount amount.
+
+Constraints
+
+10 <= price <= 100000 1 <= quantity <= 100 0 <= discount <= 50000
+
+Output Format
+
+Print the final payable amount.
+
+answer::
+
+price=int(input())
+quantity=int(input())
+discount=int(input())
+finalpayable= price+quantity+discount
+print(finalpayable)
+
+
+3)Given a three-digit integer, calculate the hundreds digit, tens digit, and units digit separately. Use integer division and modulus operators to extract the digits. Finally, calculate the sum of all three digits.
+
+Input Format
+
+The input contains a three-digit integer.
+
+Constraints
+
+Constraints
+
+100 <= number <= 999
+
+Output Format
+
+Print the hundreds digit on the first line. Print the tens digit on the second line. Print the units digit on the third line. Print the sum of the three digits on the fourth line.
+
+ans::
+
+number = int(input())
+hundreds = number // 100
+tens = (number // 10) % 10
+units = number % 10
+digit_sum = hundreds + tens + units
+print(hundreds)
+print(tens)
+print(units)
+print(digit_sum)
+
+
+4)A mobile application stores the total amount of data used by a customer in megabytes. The reporting system requires the complete number of gigabytes and the remaining megabytes. Use floor division and modulus operators to perform the conversion.
+
+1 GB = 1024 MB
+
+Input Format
+
+The input contains the total data usage in megabytes.
+
+Constraints
+
+0 <= data_usage <= 1000000
+
+Output Format
+
+Print the complete number of gigabytes on the first line. Print the remaining megabytes on the second line.
+
+ans::
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+data_usage = int(input())
+gigabytes = data_usage // 1024
+remaining_megabytes = data_usage % 10
+print(gigabytes)
+print(remaining_megabytes)
+
+
+5)A cloud storage system stores file sizes in bytes. For reporting purposes, the system needs to display the file size in kilobytes along with the remaining bytes.
+
+Given the total file size in bytes, calculate:
+
+Kilobytes = Bytes // 1024 Remaining Bytes = Bytes % 1024
+
+Display the values using the required format specifiers.
+
+Input Format
+
+A single integer representing the file size in bytes.
+
+Constraints
+
+1024 ≤ File Size ≤ 1000000000
+
+Output Format
+
+Display the result in the following format:
+
+Size: 1250 KB Remaining: 576 bytes
+
+ans::
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+file_size = int(input())
+kilobytes = file_size // 1024
+remaining_bytes = file_size % 1024
+print("Size: {} KB".format(kilobytes))
+print("Remaining: {} bytes".format(remaining_bytes))
+
+
+6)A cab booking application calculates the fare for every completed trip. The fare depends on the distance travelled and the rate charged per kilometre.
+
+In addition to the distance charge, the passenger is charged a fixed waiting fee. A discount amount is then deducted from the total fare.
+
+Calculate the final fare using the following formula:
+
+Distance Charge = Distance × Rate
+
+Final Fare = Distance Charge + Waiting Fee - Discount
+
+Display the passenger name and final fare using formatted output.
+
+Input Format
+
+The first line contains the passenger name. The second line contains the distance travelled in kilometres. The third line contains the rate per kilometre. The fourth line contains the waiting fee. The fifth line contains the discount amount. Sample Input TN09AB1234 5 40 50
+
+Constraints
+
+1 <= distance <= 500 1 <= rate <= 200 0 <= waiting_fee <= 1000 0 <= discount <= 5000
+
+Output Format
+
+Print:
+
+Passenger: Final Fare:
+
+The fare must contain exactly 2 decimal places. Sample Output
+
+Vehicle: TN09AB1234 Parking Fee: 250.00
+
+ans:
+
+# Enter your code here. Read input from STDIN. Print output to STDOU
+passenger_name = raw_input()  
+distance = float(input())
+rate = float(input())
+waiting_fee = float(input())
+discount = float(input())
+distance_charge = distance * rate
+final_fare = distance_charge + waiting_fee - discount
+print "Passenger: {}".format(passenger_name)
+print "Final Fare: {:.2f}".format(final_fare)
