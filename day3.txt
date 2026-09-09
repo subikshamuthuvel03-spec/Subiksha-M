@@ -1,0 +1,50 @@
+1) x, y, z = map(int, input().split())
+if z <= 50:
+    total_cost = x
+else:
+    total_cost = x + (z - 50) * y
+print(total_cost)
+
+2)n=int(input())
+directions = ["N","E","S","W"]
+return directions[n%4]
+
+3)a=[1,2]
+print(any(a))
+
+4)a=['false','false']
+print(any(a))
+
+4)a=[]
+if a:
+  print("s")
+else:
+  print("hi")
+
+5) v=[1,2,3,4,5]
+    if(c:=len(v))>3:print('Welcome')
+
+6)views = int(input())
+retention = int(input())
+is_original = input().strip().lower() == "true"
+is_enrolled = input().strip().lower() == "true"
+copyright_strike = input().strip().lower() == "true"
+if copyright_strike:
+    print("Not Eligible")
+elif not is_enrolled or not is_original:
+    print("Not Eligible")
+else:
+    if views >= 100000:
+        if retention >= 50:
+            print("Eligible - Premium Payout")
+        else:
+            print("Eligible - Standard Payout")
+            
+    elif 10000 <= views <= 99999:
+        if retention >= 60:
+            print("Eligible - Standard Payout")
+        else:
+            print("Eligible - Minimum Payout")
+            
+    else:  # views < 10000
+        print("Not Eligible - Below Threshold")
